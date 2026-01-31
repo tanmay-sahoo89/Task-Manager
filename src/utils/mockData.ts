@@ -1,0 +1,275 @@
+import { User, Task, Project } from '../types';
+
+export const mockUsers: User[] = [
+  {
+    id: 'user1',
+    email: 'demo@example.com',
+    name: 'John Doe',
+    role: 'admin',
+  },
+  {
+    id: 'user2',
+    email: 'sarah@example.com',
+    name: 'Sarah Johnson',
+    role: 'member',
+  },
+  {
+    id: 'user3',
+    email: 'mike@example.com',
+    name: 'Mike Chen',
+    role: 'member',
+  },
+  {
+    id: 'user4',
+    email: 'emily@example.com',
+    name: 'Emily Davis',
+    role: 'member',
+  },
+  {
+    id: 'user5',
+    email: 'alex@example.com',
+    name: 'Alex Martinez',
+    role: 'member',
+  },
+];
+
+export const mockProjects: Project[] = [
+  {
+    id: 'proj1',
+    name: 'Website Redesign',
+    color: '#3b82f6',
+  },
+  {
+    id: 'proj2',
+    name: 'Mobile App',
+    color: '#10b981',
+  },
+  {
+    id: 'proj3',
+    name: 'Marketing Campaign',
+    color: '#f59e0b',
+  },
+  {
+    id: 'proj4',
+    name: 'Internal Tools',
+    color: '#8b5cf6',
+  },
+];
+
+export const mockTasks: Task[] = [
+  {
+    id: 'task1',
+    title: 'Review design mockups',
+    description: 'Check the new landing page designs and provide feedback on the color scheme and layout.',
+    status: 'in-progress',
+    priority: 'high',
+    assignedTo: 'user2',
+    dueDate: '2024-02-15',
+    categoryId: 'proj1',
+    createdAt: '2024-02-01T10:00:00Z',
+    updatedAt: '2024-02-05T14:30:00Z',
+    comments: [
+      { id: 'c1', userId: 'user1', text: 'Looking good so far!', date: '2024-02-05T14:30:00Z' }
+    ],
+  },
+  {
+    id: 'task2',
+    title: 'Implement user authentication',
+    description: 'Add login and signup functionality with JWT tokens.',
+    status: 'completed',
+    priority: 'high',
+    assignedTo: 'user3',
+    dueDate: '2024-02-10',
+    categoryId: 'proj2',
+    createdAt: '2024-01-28T09:00:00Z',
+    updatedAt: '2024-02-09T16:00:00Z',
+    comments: [],
+  },
+  {
+    id: 'task3',
+    title: 'Write blog post about product launch',
+    description: 'Create engaging content for the upcoming product announcement.',
+    status: 'pending',
+    priority: 'medium',
+    assignedTo: 'user4',
+    dueDate: '2024-02-20',
+    categoryId: 'proj3',
+    createdAt: '2024-02-03T11:00:00Z',
+    updatedAt: '2024-02-03T11:00:00Z',
+    comments: [],
+  },
+  {
+    id: 'task4',
+    title: 'Fix navigation bug on mobile',
+    description: 'The hamburger menu is not closing properly on iOS devices.',
+    status: 'in-progress',
+    priority: 'high',
+    assignedTo: 'user3',
+    dueDate: '2024-02-12',
+    categoryId: 'proj1',
+    createdAt: '2024-02-04T08:30:00Z',
+    updatedAt: '2024-02-06T10:00:00Z',
+    comments: [
+      { id: 'c2', userId: 'user2', text: 'I can reproduce this on my iPhone', date: '2024-02-06T10:00:00Z' }
+    ],
+  },
+  {
+    id: 'task5',
+    title: 'Update API documentation',
+    description: 'Add examples for the new endpoints and update version numbers.',
+    status: 'pending',
+    priority: 'low',
+    assignedTo: 'user5',
+    dueDate: '2024-02-25',
+    categoryId: 'proj4',
+    createdAt: '2024-02-02T13:00:00Z',
+    updatedAt: '2024-02-02T13:00:00Z',
+    comments: [],
+  },
+  {
+    id: 'task6',
+    title: 'Create social media graphics',
+    description: 'Design posts for Instagram, Twitter, and LinkedIn announcing the new feature.',
+    status: 'pending',
+    priority: 'medium',
+    assignedTo: 'user4',
+    dueDate: '2024-02-18',
+    categoryId: 'proj3',
+    createdAt: '2024-02-05T15:00:00Z',
+    updatedAt: '2024-02-05T15:00:00Z',
+    comments: [],
+  },
+  {
+    id: 'task7',
+    title: 'Optimize database queries',
+    description: 'Improve performance of the dashboard by reducing query complexity.',
+    status: 'in-progress',
+    priority: 'medium',
+    assignedTo: 'user3',
+    dueDate: '2024-02-16',
+    categoryId: 'proj4',
+    createdAt: '2024-02-01T12:00:00Z',
+    updatedAt: '2024-02-07T09:00:00Z',
+    comments: [
+      { id: 'c3', userId: 'user1', text: 'Focus on the reports page first', date: '2024-02-07T09:00:00Z' }
+    ],
+  },
+  {
+    id: 'task8',
+    title: 'Setup automated testing',
+    description: 'Configure Jest and React Testing Library for component tests.',
+    status: 'completed',
+    priority: 'medium',
+    assignedTo: 'user3',
+    dueDate: '2024-02-08',
+    categoryId: 'proj2',
+    createdAt: '2024-01-30T10:00:00Z',
+    updatedAt: '2024-02-08T17:00:00Z',
+    comments: [],
+  },
+  {
+    id: 'task9',
+    title: 'Conduct user interviews',
+    description: 'Schedule and run 5 user interviews to gather feedback on the new dashboard.',
+    status: 'pending',
+    priority: 'high',
+    assignedTo: 'user2',
+    dueDate: '2024-02-14',
+    categoryId: 'proj1',
+    createdAt: '2024-02-04T14:00:00Z',
+    updatedAt: '2024-02-04T14:00:00Z',
+    comments: [],
+  },
+  {
+    id: 'task10',
+    title: 'Refactor payment processing',
+    description: 'Clean up the payment module and add error handling.',
+    status: 'pending',
+    priority: 'low',
+    assignedTo: 'user5',
+    dueDate: '2024-02-28',
+    categoryId: 'proj4',
+    createdAt: '2024-02-03T16:00:00Z',
+    updatedAt: '2024-02-03T16:00:00Z',
+    comments: [],
+  },
+  {
+    id: 'task11',
+    title: 'Design email templates',
+    description: 'Create responsive email templates for user notifications.',
+    status: 'in-progress',
+    priority: 'medium',
+    assignedTo: 'user2',
+    dueDate: '2024-02-17',
+    categoryId: 'proj3',
+    createdAt: '2024-02-06T11:00:00Z',
+    updatedAt: '2024-02-07T15:00:00Z',
+    comments: [],
+  },
+  {
+    id: 'task12',
+    title: 'Add dark mode support',
+    description: 'Implement theme switching across the entire application.',
+    status: 'completed',
+    priority: 'low',
+    assignedTo: 'user3',
+    dueDate: '2024-02-11',
+    categoryId: 'proj1',
+    createdAt: '2024-01-29T09:00:00Z',
+    updatedAt: '2024-02-10T18:00:00Z',
+    comments: [
+      { id: 'c4', userId: 'user1', text: 'Great work!', date: '2024-02-10T18:00:00Z' }
+    ],
+  },
+  {
+    id: 'task13',
+    title: 'Plan Q2 roadmap',
+    description: 'Gather input from stakeholders and prioritize features for next quarter.',
+    status: 'pending',
+    priority: 'high',
+    assignedTo: 'user1',
+    dueDate: '2024-02-22',
+    categoryId: 'proj4',
+    createdAt: '2024-02-05T10:00:00Z',
+    updatedAt: '2024-02-05T10:00:00Z',
+    comments: [],
+  },
+  {
+    id: 'task14',
+    title: 'Update privacy policy',
+    description: 'Review and update privacy policy to comply with new regulations.',
+    status: 'pending',
+    priority: 'medium',
+    assignedTo: 'user5',
+    dueDate: '2024-02-19',
+    categoryId: 'proj4',
+    createdAt: '2024-02-02T14:00:00Z',
+    updatedAt: '2024-02-02T14:00:00Z',
+    comments: [],
+  },
+  {
+    id: 'task15',
+    title: 'Integrate analytics dashboard',
+    description: 'Connect Google Analytics and create custom reports.',
+    status: 'in-progress',
+    priority: 'low',
+    assignedTo: 'user5',
+    dueDate: '2024-02-26',
+    categoryId: 'proj2',
+    createdAt: '2024-02-01T15:00:00Z',
+    updatedAt: '2024-02-06T12:00:00Z',
+    comments: [],
+  },
+];
+
+export const initializeLocalStorage = () => {
+  if (!localStorage.getItem('taskManager_users')) {
+    localStorage.setItem('taskManager_users', JSON.stringify(mockUsers));
+  }
+  if (!localStorage.getItem('taskManager_tasks')) {
+    localStorage.setItem('taskManager_tasks', JSON.stringify(mockTasks));
+  }
+  if (!localStorage.getItem('taskManager_projects')) {
+    localStorage.setItem('taskManager_projects', JSON.stringify(mockProjects));
+  }
+};
